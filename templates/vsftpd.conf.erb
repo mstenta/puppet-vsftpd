@@ -185,3 +185,9 @@ pasv_address=<%= @ec2_public_ipv4 %>
 # Allow writeable chroot.
 # See http://www.benscobie.com/fixing-500-oops-vsftpd-refusing-to-run-with-writable-root-inside-chroot/
 allow_writeable_chroot=YES
+
+# Temporary workaround to fix error:
+# See http://chemdroid.net/en/ubuntu/23-vsftpd-500-oops-priv-sock-get-cmd
+# and http://bugs.launchpad.net/ubuntu/+source/vsftpd/+bug/1160372
+seccomp_sandbox=NO
+
